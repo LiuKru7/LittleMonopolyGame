@@ -7,7 +7,8 @@ export const  gameInfoSlice = createSlice({
         position: 1,
         money: 1500,
         haveStreets: [],
-        diceValue: 0
+        diceValue: 0,
+        error: ""
     }
     ,
     reducers: {
@@ -25,6 +26,9 @@ export const  gameInfoSlice = createSlice({
         },
         changeDiceValue : (state,action) => {
             state.diceValue = action.payload
+        },
+        changeError : (state, action) => {
+            state.error = action.payload
         }
     }
 })
@@ -33,7 +37,9 @@ export const { figureUpdate,
     changePosition,
     changeMoney,
     changeHaveStreets,
-    changeDiceValue
+    changeDiceValue,
+    changeError
+
 
 } = gameInfoSlice.actions
 export default gameInfoSlice.reducer

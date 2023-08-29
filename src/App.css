@@ -66,6 +66,9 @@
 .border-radius-10 {
     border-radius: 10px;
 }
+.border-bottom-3px {
+    border-bottom: 3px solid black;
+}
 
 
 /*StartGame Page*/
@@ -119,6 +122,7 @@
 }
 .grid-container img {
     width: 75%;
+    position: relative;
 }
 .figureGo {
     margin-top: -20px;
@@ -153,8 +157,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
 }
+.cell-1 div {
+    border: 0;
+}
+
 .rolDice {
     position: absolute;
     top: 121px;
@@ -162,11 +169,13 @@
     background-color: #6dfdb3;
     width: 642px;
     height: 483px;
-
+    background-image: url("https://e7.pngegg.com/pngimages/3/543/png-clipart-board-game-square-area-yellow-pattern-orange-frame-border-texture.png");
+    background-position: center;
+    background-size: initial;
 
 }
 .rolDice img {
-    width: 80px;
+    width: 150px;
 }
 .playerInfo {
     width: 300px;
@@ -192,4 +201,24 @@ button {
     background-color: #811010;
     color: white;
     border-radius: 10px;
+}
+
+.rolDice Button {
+    padding: 10px 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: green;
+    border: 5px solid black;
+    border-radius: 15px;
+    color: white;
+    margin-top: 50px;
+}
+.errorText {
+    color: #ef0a0a;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.newFigure {
+    position: absolute;
+    top: ;
 }

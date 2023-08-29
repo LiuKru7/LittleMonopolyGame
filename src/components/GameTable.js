@@ -1,7 +1,8 @@
-import React from 'react';
+
 import RolDice from "./RolDice";
 import {useDispatch, useSelector} from "react-redux";
-import {changeMoney, changeHaveStreets} from "../features/gameInfo";
+import {changeMoney, changeHaveStreets,changeError} from "../features/gameInfo";
+
 
 const gameTableInfo = [
     {id: 1, street: "", color: "", price: 0},
@@ -52,8 +53,11 @@ const GameTable = () => {
             dispatch(changeMoney(info.money-streetsWithId[0].price))
             console.log(streetsWithId[0].price)
             dispatch(changeHaveStreets([...info.haveStreets, streetsWithId[0]]))
+        } else {
+            dispatch(changeError("not enough money"))
         }
     }
+
     function buy(value) {
 
         if (info.position === value.id ) {
@@ -74,14 +78,16 @@ const GameTable = () => {
             <div className="grid-container">
                 {gameTableInfo.map((value, index) => (
                     <div key={index} className={`grid-cell cell-${value.id}`} >
-                        <div className="p-7" style={{backgroundColor:value.color}}>  </div>
+                        <div className="p-7 border-bottom-3px" style={{backgroundColor:value.color}}></div>
                         <div className="t-bold t-size-small">{value.street}</div>
                         {value.price!==0 && <div className="t-size-verySmall">Price: {value.price}$</div>}
                         {buy(value) && buy(value)}
+
                         {info.position===value.id&& <div className="figureGo"><img src={info.figureUrl} alt=""/>
                         </div>}
                     </div>
                 ))}
+
                 <RolDice/>
             </div>
         </div>
