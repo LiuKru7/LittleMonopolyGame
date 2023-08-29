@@ -4,6 +4,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {changeMoney, changeHaveStreets,changeError} from "../features/gameInfo";
 
 
+
+
 const gameTableInfo = [
     {id: 1, street: "", color: "", price: 0},
     {id: 2, street: "Baranausko", color: "#a8ff9a", price: 150},
@@ -85,8 +87,10 @@ const GameTable = () => {
 
                         {info.position===value.id&& <div className="figureGo"><img src={info.figureUrl} alt=""/>
                         </div>}
+
                     </div>
                 ))}
+
 
                 <RolDice/>
             </div>

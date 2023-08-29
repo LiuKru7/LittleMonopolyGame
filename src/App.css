@@ -153,7 +153,7 @@
 .cell-1 {
     color: white;
     background-color: #013301;
-    background-image: url("https://i.pinimg.com/originals/39/40/e7/3940e7b3ddaaf13efbd94a8a050d098a.png");
+    background-image: url("./images/start-field .png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -169,7 +169,7 @@
     background-color: #6dfdb3;
     width: 642px;
     height: 483px;
-    background-image: url("https://e7.pngegg.com/pngimages/3/543/png-clipart-board-game-square-area-yellow-pattern-orange-frame-border-texture.png");
+    background-image: url("./images/board.png");
     background-position: center;
     background-size: initial;
 

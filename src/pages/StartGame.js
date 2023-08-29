@@ -2,22 +2,18 @@ import React, {useState} from 'react';
 import {useDispatch} from "react-redux";
 import {figureUpdate} from "../features/gameInfo";
 import {useNavigate} from "react-router-dom";
+import figure1 from '../images/figure-1.png';
+import figure2 from '../images/figure-2.png';
+import figure3 from '../images/figure-3.avif';
+import figure4 from '../images/figure-4.webp';
 
 const StartGame = () => {
     const dispatch = useDispatch ()
     const figureImg = [
-        {
-            img: "https://cdn0.iconfinder.com/data/icons/board-games-colored-1/48/Games_BoardGames_Artboard_8-512.png"
-        },
-        {
-            img: "https://cdn0.iconfinder.com/data/icons/board-games-colored-1/48/Games_BoardGames_Artboard_5-512.png"
-        },
-        {
-            img: "https://www.wftv.com/resizer/ga_-NI_y_BmgAbbp78eUtboki5w=/arc-anglerfish-arc2-prod-cmg/public/H2JAE62D4RA4HFQOSYOFQHJOFM.png"
-        },
-        {
-            img: "https://fox8.com/wp-content/uploads/sites/12/2022/04/Hat.png"
-        }
+        { img: figure1 },
+        { img: figure2 },
+        { img: figure3 },
+        { img: figure4 }
     ];
     const [figure, setFigure] = useState()
     const nav = useNavigate()
@@ -45,6 +41,7 @@ const StartGame = () => {
                 )}
             </div>
             <button onClick={figureFunction}>Start Game</button>
+
         </div>
     );
 };

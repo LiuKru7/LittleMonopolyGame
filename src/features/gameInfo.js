@@ -1,9 +1,11 @@
 import {createSlice} from "@reduxjs/toolkit";
+import figure from "../images/figure-1.png"
+
 
 export const  gameInfoSlice = createSlice({
     name: "gameInfo",
     initialState:{
-        figureUrl: "https://cdn0.iconfinder.com/data/icons/board-games-colored-1/48/Games_BoardGames_Artboard_8-512.png",
+        figureUrl: figure,
         position: 1,
         money: 1500,
         haveStreets: [],

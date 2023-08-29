@@ -1,16 +1,25 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changePosition, changeMoney, changeDiceValue, changeError } from "../features/gameInfo";
+import dice1 from "../images/dice-1.png"
+import dice2 from "../images/dice-2.png"
+import dice3 from "../images/dice-3.png"
+import dice4 from "../images/dice-4.png"
+import dice5 from "../images/dice-5.png"
+import dice6 from "../images/dice-6.png"
+import dice0 from "../images/startGame.png"
+import diceAll from "../images/diceAll.gif"
+
 
 const RolDice = () => {
     const diceImages = [
-        "https://png.pngtree.com/png-clipart/20210311/original/pngtree-game-start-neon-light-design-png-image_5982643.png",
-        "http://www.clker.com/cliparts/X/w/P/Y/q/H/dice-1-md.png",
-        "http://www.clker.com/cliparts/X/V/S/C/I/x/dice-2-md.png",
-        "http://www.clker.com/cliparts/n/O/d/R/Y/c/dice-3-md.png",
-        "http://www.clker.com/cliparts/D/j/Z/R/5/P/dice-4-md.png",
-        "http://www.clker.com/cliparts/U/N/J/F/T/x/dice-5-md.png",
-        "http://www.clker.com/cliparts/Y/O/V/X/F/D/dice-6-md.png"
+        dice0,
+        dice1,
+        dice2,
+        dice3,
+        dice4,
+        dice5,
+        dice6
     ];
 
     const dispatch = useDispatch();
@@ -43,7 +52,7 @@ const RolDice = () => {
 
 
     function rollDice() {
-        return "https://i.imgflip.com/1iq9mu.gif";
+        return diceAll;
     }
 
     return (
