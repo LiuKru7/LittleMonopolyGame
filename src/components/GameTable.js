@@ -57,7 +57,6 @@ const GameTable = () => {
     }
 
     function buy(value) {
-
         if (info.position === value.id ) {
             if (value.price===0) return  console.log(value.price)
             const streetToBuy = info.haveStreets.find(street => street.id === value.id);
@@ -78,6 +77,7 @@ const GameTable = () => {
                     <div key={index} className={`grid-cell cell-${value.id}`} >
                         <div className="p-7 border-bottom-3px" style={{backgroundColor:value.color}}></div>
                         <div className="t-bold t-size-small">{value.street}</div>
+                        {info.haveStreets.find(id => id.id === value.id) && <div className="t-size-small owned">Owned</div>}
                         {value.price!==0 && <div className="t-size-verySmall">Price: {value.price}$</div>}
                         {buy(value) && buy(value)}
                         {info.position===value.id&& <div className="figureGo"><img src={info.figureUrl} alt=""/>
