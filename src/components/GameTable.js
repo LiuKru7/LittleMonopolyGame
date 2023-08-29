@@ -1,10 +1,6 @@
-
 import RolDice from "./RolDice";
 import {useDispatch, useSelector} from "react-redux";
 import {changeMoney, changeHaveStreets,changeError} from "../features/gameInfo";
-
-
-
 
 const gameTableInfo = [
     {id: 1, street: "", color: "", price: 0},
@@ -84,14 +80,10 @@ const GameTable = () => {
                         <div className="t-bold t-size-small">{value.street}</div>
                         {value.price!==0 && <div className="t-size-verySmall">Price: {value.price}$</div>}
                         {buy(value) && buy(value)}
-
                         {info.position===value.id&& <div className="figureGo"><img src={info.figureUrl} alt=""/>
                         </div>}
-
                     </div>
                 ))}
-
-
                 <RolDice/>
             </div>
         </div>

@@ -33,7 +33,6 @@ const RolDice = () => {
 
 
     function random() {
-
         if (!figure || rolling) return;
         setRolling(true);
         dispatch(changeError(""));
@@ -47,20 +46,13 @@ const RolDice = () => {
                 dispatch(changePosition(position + randomNumber - 20));
                 dispatch(changeMoney(money + 200));
             }
-        }, 2000);
-    }
-
-
-    function rollDice() {
-        return diceAll;
+        }, 1000);
     }
 
     return (
         <div className="rolDice t-center a-center d-flex f-col j-center">
             {error && <div className="p-10 errorText">{error}</div>}
-
-            <img src={rolling ? rollDice() : diceImages[diceNumber]} alt={`Dice ${diceNumber}`} />
-
+            <img src={rolling ? diceAll : diceImages[diceNumber]} alt={`Dice ${diceNumber}`} />
             <button className="p-10 m-10" onClick={random} disabled={rolling}>
                 ROLL DICE
             </button>

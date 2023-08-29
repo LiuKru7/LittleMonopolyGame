@@ -18,7 +18,6 @@ const StartGame = () => {
     const [figure, setFigure] = useState()
     const nav = useNavigate()
 
-
     function figureFunction () {
         if (!figure) return
         dispatch(figureUpdate(figure))
@@ -31,19 +30,14 @@ const StartGame = () => {
                 {figureImg.map((x,i)=> (
                     <div key={i}
                         onClick={() => { setFigure(x.img) }}
-                        style={{
-                            backgroundColor: x.img === figure ? "green" : ""
-                        }}
-                    >
+                        style={{backgroundColor: x.img === figure ? "green" : ""}}>
                         <img src={x.img} alt="" />
                     </div>
                     )
                 )}
             </div>
             <button onClick={figureFunction}>Start Game</button>
-
         </div>
     );
 };
-
 export default StartGame;
